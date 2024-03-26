@@ -13,7 +13,7 @@ void radixSort::countSort(string A[], int n, int pos)
 {
   int range = 26; // Range of letters. We know that there are 26 letters in the English Alphabet.
   int count[range]; // Instantiating array B(count)
-  
+  string output[n]; // Instantiating output array C
   //Count each occurance of each letter
   for (int i = 0; i < n; ++i) 
   {
@@ -25,16 +25,19 @@ void radixSort::countSort(string A[], int n, int pos)
   {
         count[i] += count[i - 1];
   }
+  
+
   //Output Array building. 
-  for (int i = size - 1; i >= 0; --i) 
+  for (int i = n - 1; i >= 0; --i) 
   {
         char ch = A[i][pos];
         output[count[ch] - 1] = A[i];
         count[ch]--;
   }
   //Replace A[] with sorted output array.
-  for (int i = 0; i < size; ++i) {
-        arr[i] = output[i];
+  for (int i = 0; i < n; ++i) 
+    {
+        A[i] = output[i];
     }
   
 }
