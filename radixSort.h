@@ -7,8 +7,8 @@ using namespace std;
 class radixSort {
 public:
   radixSort();
-  countSort(string A[], int n, int pos);
-  sort(string A[], int n, int d);
+  void countSort(string A[], int n, int pos);
+  void sort(string A[], int n, int d);
   ~radixSort();
 
   
