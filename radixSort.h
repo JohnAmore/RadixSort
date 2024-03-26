@@ -9,9 +9,7 @@ public:
   radixSort();
   void countSort(string A[], int n, int pos);
   void sort(string A[], int n, int d);
-  ~radixSort();
 
-  
 };
 
 
