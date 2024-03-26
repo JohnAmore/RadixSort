@@ -16,7 +16,7 @@ radixSort::countSort(string A[], int n, int pos)
   
   //Count each occurance of each letter
   for (int i = 0; i < n; ++i) 
-  }
+  {
         char ch = A[i][pos];
         count[ch]++;
   }
